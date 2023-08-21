@@ -1,0 +1,32 @@
+
+import java.util.Scanner;
+
+
+public class Login {
+    
+   // Hesap hesap yamamamızın nedeni string hesap gibi düşün ya da int hesap yerine Hesap hesap yaptık. 
+   public boolean Login(Hesap hesap){
+       Scanner scanner = new Scanner (System.in);
+       
+       String kullanici_adi;
+       String parola;
+       System.out.print("Kullanıcı adı: " );
+       kullanici_adi = scanner.nextLine();
+       System.out.print("Parola: ");
+       parola = scanner.nextLine();
+       
+       if (hesap.getKullanici_adi().equals(kullanici_adi) && hesap.getParola().equals(parola)){
+           return true;
+       }
+       else {
+           return false;
+       }
+       
+   }
+
+    
+}
+
+
+    
+
